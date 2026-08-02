@@ -20,7 +20,6 @@ class Info:
         self.local_timezone =  datetime.now().astimezone().tzinfo
         self.datetime =  datetime.now().astimezone()
 
-
     def display_info(self):
         print("------USER INFO------")
         print(f"Name: {self.name}")
@@ -30,3 +29,11 @@ class Info:
         print(f"Language: {self.language}")
 
 
+    def to_dict(self):
+        return {
+        "name": self.name,
+        "date_of_birth": self.date_of_birth,
+        "language": self.language,
+        "timezone": str(self.local_timezone),
+        "datetime": str(self.datetime)
+    }

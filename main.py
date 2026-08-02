@@ -1,10 +1,11 @@
-from Setup.info import Info
-
-def main():
-    user = Info()
-    user.collect_info()
-    user.display_info()
+from Setup.info  import Info
+from Storage.storage import Storage
 
 
-if __name__ == "__main__":
-    main()
+user = Info()
+
+user.collect_info()
+
+Storage.save("profile", user.to_dict())
+
+user.display_info()
