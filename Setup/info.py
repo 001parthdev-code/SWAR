@@ -1,7 +1,7 @@
 from zoneinfo import ZoneInfo
 from datetime import datetime
 
-class Info:
+class Profile:
     def __init__(self):
         self.name = None
         self.date_of_birth = None
